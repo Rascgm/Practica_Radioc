@@ -6,7 +6,16 @@ class C_Circunferencia
 
      if perimetro.is_a?(Numeric)
 
-       perimetro / ( 2 * Math::PI )
+       if perimetro > 0
+
+         perimetro / ( 2 * Math::PI )
+
+       else
+
+         puts '# El perimetro debe tener un valor superior a 0'
+
+
+       end
 
      else
 
