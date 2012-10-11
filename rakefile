@@ -1,0 +1,26 @@
+# rakefile
+
+require "rake/testtask"
+require "./p_radio.rb"
+
+desc "Tarea por defecto. Calcula con perimetros aleatorios"
+task :default do
+
+  aux = C_Circunferencia.new()
+  n_rand = rand(50) * ( 50 - 1 ) + 1
+  puts " > El radio de la circunferencia con perimetro #{n_rand} es #{aux.C_radio(n_rand)}"
+
+end
+
+
+desc "Se pide por pantalla el perimetro para que lo inserte el usuario"
+task :intro do
+
+  puts "> Introduzca el perimetro:"
+  STDOUT.flush
+  per = gets.chomp
+  aux = C_Circunferencia.new()
+  puts " > El radio de la circunferencia con perimetro #{per} es #{aux.C_radio(per)}"
+
+
+end
