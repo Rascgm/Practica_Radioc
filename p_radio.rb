@@ -4,7 +4,15 @@ class C_Circunferencia
 
   def C_radio(perimetro)
 
-     perimetro / ( 2 * Math::PI )
+     if perimetro.is_a?(Numeric)
+
+       perimetro / ( 2 * Math::PI )
+
+     else
+
+       puts '# El parametro de entrada no es numerico'
+
+     end
 
   end
 
