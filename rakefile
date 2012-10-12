@@ -12,15 +12,12 @@ task :default do
 
 end
 
+desc "Tests del programa"
+Rake::TestTask.new do |t|
 
-desc "Se pide por pantalla el perimetro para que lo inserte el usuario"
-task :intro do
-
-  puts "> Introduzca el perimetro:"
-  STDOUT.flush
-  per = gets.chomp
-  aux = C_Circunferencia.new()
-  puts " > El radio de la circunferencia con perimetro #{per} es #{aux.C_radio(per)}"
+  t.libs << "test"
+  t.test_files = FileList['./t_*.rb']
+  t.verbose = true
 
 
 end

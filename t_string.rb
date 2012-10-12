@@ -8,7 +8,7 @@ class Tests_Pstring < Test::Unit::TestCase
   def test
 
     assert_nil(C_Circunferencia.new().C_radio('string'))
-
+   
 
   end
 
